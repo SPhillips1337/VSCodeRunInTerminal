@@ -1,0 +1,56 @@
+{
+  "name": "terminal-bridge",
+  "displayName": "Terminal Bridge",
+  "description": "Run selected text in the integrated terminal via context menu or keybinding",
+  "version": "0.0.1",
+  "publisher": "your-publisher-id",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SPhillips1337/VSCodeRunInTerminal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SPhillips1337/VSCodeRunInTerminal/issues"
+  },
+  "homepage": "https://github.com/SPhillips1337/VSCodeRunInTerminal#readme",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "terminalBridge.runInTerminal",
+        "title": "Run in Terminal"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "terminalBridge.runInTerminal",
+          "when": "editorHasSelection",
+          "group": "terminal@1"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "terminalBridge.runInTerminal",
+        "key": "alt+shift+enter",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^18.x",
+    "typescript": "^5.x"
+  }
+}

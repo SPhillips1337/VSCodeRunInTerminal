@@ -1,0 +1,30 @@
+# Compiled output
+out/
+*.js.map
+
+# Dependencies
+node_modules/
+
+# Packaged extension
+*.vsix
+
+# VS Code test runner
+.vscode-test/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment / secrets
+.env
+.env.*
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor temp files
+*.swp
+*.swo
+*~
