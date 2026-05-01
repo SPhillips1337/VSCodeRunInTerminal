@@ -3,7 +3,7 @@
   "displayName": "Terminal Bridge",
   "description": "Run selected text in the integrated terminal via context menu or keybinding",
   "version": "0.0.1",
-  "publisher": "your-publisher-id",
+  "publisher": "StephenPhillips",
   "license": "MIT",
   "repository": {
     "type": "git",
